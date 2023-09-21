@@ -9,3 +9,13 @@
 if you want to give sibling in React.createElement then you have to pass children in array.
 
 ** You have to create Array of Children for Sibling **
+** JSX will make our life easy when creating Tag**
+** But Without JSX also We can write React Code this is example of Core React**
+
+\*\*
+
+<div id="root">
+
+<h1>Abhimanyu is here</h1>
+</div> Here h1 Tag will be replaced by parent when we are doing root.render 
+**
