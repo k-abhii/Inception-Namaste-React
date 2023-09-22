@@ -20,6 +20,10 @@ if you want to give sibling in React.createElement then you have to pass childre
 </div> Here h1 Tag will be replaced by parent when we are doing root.render 
 **
 ** What does root.render is doing ? **
-Putting parent Tag inside root 
+Putting parent Tag inside root
 
-** React is only working inside div id =root  **
+** React is only working inside div id =root **
+
+React Has taken control over this div (id = root)
+
+React is library we can apply in small portion of our app also that is not the case with framework.
