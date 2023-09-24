@@ -10,14 +10,7 @@
 <h2>I'm an H2 Tag</h2>
 </div>
 </div>
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+ 
  */
 
 // const heading = React.createElement(
@@ -26,6 +19,11 @@
 //   "Hello World From React!"
 // );
 // console.log(heading); //Object
+// import React from "react";
+// import { ReactDOM } from "react-dom/client";
+import React from "react";
+import ReactDOM from "react-dom";
+
 const parent = React.createElement("div", { id: "parent" }, [
   React.createElement("div", { id: "child" }, [
     React.createElement("h1", {}, "I'm an H1 Tag"),
