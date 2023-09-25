@@ -22,7 +22,6 @@
 // import React from "react";
 // import { ReactDOM } from "react-dom/client";
 
-
 // const parent = React.createElement("div", { id: "parent" }, [
 //   React.createElement("div", { id: "child" }, [
 //     React.createElement("h1", {}, "I'm an H1 Tag"),
@@ -39,4 +38,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-
+//At the end of the day React.createElement is an object
+const heading = React.createElement(
+  "h1",
+  { id: "heading" },
+  "Namaste React 🚀"
+);
+console.log(heading);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(heading);
