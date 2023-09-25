@@ -9,24 +9,24 @@ import ReactDOM from "react-dom/client";
 // );
 // console.log(heading);
 //React Element
-const heading =(
-  <h1 id ="head">Namaste React Using JSX 🚀</h1>
-)
+const heading = <h1 id="head">Namaste React Using JSX 🚀</h1>;
 const Title = () => (
   <h1 id="heading" className="head">
     Namaste React using JSX 🚀
   </h1>
 );
 
-
 //React Functional Component
 
 const HeadingComponent = () => {
   return <h1> Namaste React Functional Component </h1>;
 };
+const number = 10000;
 const HeadingComponent2 = () => (
   <div id="container">
     <HeadingComponent />
+    {heading}
+    <h2>{number}</h2>
     <Title />
     <h1 className="heading">React Functional Component Short Hnad Syntax</h1>
   </div>
