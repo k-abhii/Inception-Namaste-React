@@ -1,49 +1,36 @@
-/* NESTED HTML STRUCTURE IN REACT  Using React.createElement
-
-<div id="parent">
-<div id ="child">
-<h1> I'm H1 Tag</h1>
-<h2>I'm an H2 Tag</h2>
-</div>
-<div id ="child2">
-<h1> I'm H1 Tag</h1>
-<h2>I'm an H2 Tag</h2>
-</div>
-</div>
- 
- */
-
-// const heading = React.createElement(
-//   "h1",
-//   { id: "heading", xyz: "abc" },
-//   "Hello World From React!"
-// );
-// console.log(heading); //Object
-// import React from "react";
-// import { ReactDOM } from "react-dom/client";
-
-// const parent = React.createElement("div", { id: "parent" }, [
-//   React.createElement("div", { id: "child" }, [
-//     React.createElement("h1", {}, "I'm an H1 Tag"),
-//     React.createElement("h2", {}, "I'm an H2 tag"),
-//   ]),
-//   React.createElement("div", { id: "child2" }, [
-//     React.createElement("h1", {}, "I'm an H1 Tag"),
-//     React.createElement("h2", {}, "I'm an H2 tag"),
-//   ]),
-// ]);
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(parent);
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 
 //At the end of the day React.createElement is an object
-const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "Namaste React 🚀"
+// const heading = React.createElement(
+//   "h1",
+//   { id: "heading" },
+//   "Namaste React 🚀"
+// );
+// console.log(heading);
+//React Element
+const heading =(
+  <h1 id ="head">Namaste React Using JSX 🚀</h1>
+)
+const Title = () => (
+  <h1 id="heading" className="head">
+    Namaste React using JSX 🚀
+  </h1>
 );
-console.log(heading);
+
+
+//React Functional Component
+
+const HeadingComponent = () => {
+  return <h1> Namaste React Functional Component </h1>;
+};
+const HeadingComponent2 = () => (
+  <div id="container">
+    <HeadingComponent />
+    <Title />
+    <h1 className="heading">React Functional Component Short Hnad Syntax</h1>
+  </div>
+);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(<HeadingComponent2 />);
+//JSX -is not HTML in JS
