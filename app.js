@@ -1,36 +1,47 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-//At the end of the day React.createElement is an object
-// const heading = React.createElement(
-//   "h1",
-//   { id: "heading" },
-//   "Namaste React 🚀"
-// );
-// console.log(heading);
-//React Element
-const heading = <h1 id="head">Namaste React Using JSX 🚀</h1>;
-const Title = () => (
-  <h1 id="heading" className="head">
-    Namaste React using JSX 🚀
-  </h1>
-);
-
-//React Functional Component
-
-const HeadingComponent = () => {
-  return <h1> Namaste React Functional Component </h1>;
+/*
+Header
+-Logo
+-Nav Items
+Body
+-Search
+-RestaurantContainer
+---RestaurantCard
+FOOTER
+-Copyright
+-Links
+-Address
+-Contact
+*/
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdaMYtVi9_tfNcpsbGGseU6ehYgV9UeU3h7A&usqp=CAU"
+        />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
 };
-const number = 10000;
-const HeadingComponent2 = () => (
-  <div id="container">
-    <HeadingComponent />
-    {heading}
-    <h2>{number}</h2>
-    <Title />
-    <h1 className="heading">React Functional Component Short Hnad Syntax</h1>
-  </div>
-);
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+    </div>
+  );
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent2 />);
+root.render(<AppLayout />);
 //JSX -is not HTML in JS
